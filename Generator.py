@@ -19,7 +19,8 @@ def runFunc(num,total):
             output_list.append(i)
         doubleNumber+=1
     #print(output_list)
-
+    
+    #converting list of integers to string
     str_output = [str(int) for int in output_list]
     str_output = ",".join(str_output)
 
