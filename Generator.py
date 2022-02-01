@@ -1,9 +1,9 @@
 def runFunc(num,total):
     current=0
     doubleNumber=1
-    arr=[]
+    output_list=[]
 
-    outfile = open('data.txt','w')
+    outfile = open('result.txt','w')
 
     while(current<total):
         if doubleNumber >= num:
@@ -14,19 +14,18 @@ def runFunc(num,total):
             if(current > total):
                 break
             if(i==doubleNumber):
-                arr.append(i)
+                output_list.append(i)
                 current += 1
-            arr.append(i)
+            output_list.append(i)
         doubleNumber+=1
-    print(arr)
+    #print(output_list)
 
-    string_ints = [str(int) for int in arr]
+    str_output = [str(int) for int in output_list]
+    str_output = ",".join(str_output)
 
-    str_of_ints = ",".join(string_ints)
+    #print(str_output)
 
-    print(str_of_ints)
-
-    outfile.write(str_of_ints)
+    outfile.write(str_output)
     outfile.close()
 
 
